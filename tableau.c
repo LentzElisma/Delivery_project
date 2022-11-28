@@ -171,3 +171,18 @@ int ** creer_masque_aleatoire(int size) {
 
     return masque ;
 }
+int** generer_jeu(int** solution,int** masque,int size){
+    int i,j;
+    printf("-- Grille de jeu --\n");
+    int** grille_jeu= creer_matrice(size);
+    for(i=0;i<size;i++){
+        for(j=0;j<size;j++){
+            if(masque[i][j]==1){
+                grille_jeu[i][j]=solution[i][j];
+            } else{
+                grille_jeu[i][j]=9;
+            }
+        }
+    }
+    return grille_jeu;
+}
