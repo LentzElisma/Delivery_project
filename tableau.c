@@ -186,3 +186,37 @@ int** generer_jeu(int** solution,int** masque,int size){
     }
     return grille_jeu;
 }
+
+
+void begin_the_game_manuel() {
+    int dimension_choisie;
+    char user_name[30];
+    printf(" Saissez vote username :\n");
+    scanf("%s", &user_name);
+
+    Color(12, 0);
+    printf(" |1| Bienvenue dans le jeu de Takuzu - %s - |0| \n", user_name);
+    Color(15, 0);
+    printf(" \n");
+    do {
+        printf("Saisir le type de la grille de jeu,  4 ou 8 : ");
+        scanf("%d", &dimension_choisie);
+    } while (dimension_choisie != 4 && dimension_choisie != 8);
+    int** solution;
+    if(dimension_choisie==4){
+        solution = remplir_matrice_4x4(dimension_choisie);
+    }
+    else
+    {
+        solution = remplir_matrice_8x8(dimension_choisie);
+
+    }
+
+    int** masque = creer_masque_manuel(dimension_choisie);
+    afficher_matrice(masque,dimension_choisie);
+    printf("\n");
+    int** grille_jeu = generer_jeu(solution, masque, dimension_choisie);
+    afficher_matrice(grille_jeu, dimension_choisie);
+    saisir_chiffre_utilisateur(grille_jeu, solution, dimension_choisie);
+
+}
