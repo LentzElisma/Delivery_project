@@ -218,5 +218,7 @@ void begin_the_game_manuel() {
     int** grille_jeu = generer_jeu(solution, masque, dimension_choisie);
     afficher_matrice(grille_jeu, dimension_choisie);
     saisir_chiffre_utilisateur(grille_jeu, solution, dimension_choisie);
-
 }
+
+
+
