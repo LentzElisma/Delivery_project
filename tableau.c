@@ -220,5 +220,26 @@ void begin_the_game_manuel() {
     saisir_chiffre_utilisateur(grille_jeu, solution, dimension_choisie);
 }
 
+void replay_game() {
+
+    int choix;
+    do {
+        printf("Appuyez sur 1 ou 2 pour retourner au menu principal:\n");
+        scanf("%d", &choix);
+        Color(15,0);
+    } while (choix!=1);
+    switch (choix) {
+        case 1:
+            menu_du_jeu();
+            printf("\n");
+            break;
+        case 2:
+            menu_du_jeu();
+            break;
+        default:
+            break;
+    }
+}
+
 
 
