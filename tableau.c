@@ -140,6 +140,17 @@ void afficher_matrice(int** Matrice, int dim) {
 
 }
 
+void regles_du_jeu() {
+    printf("-----------------------------------------\n");
+    printf(" | Lisez attentivement les regles du jeu |\n");
+    printf("-----------------------------------------\n");
+    printf("1-Dans une ligne, il doit y avoir autant de 0 que de 1. \n");
+    printf("2-Dans une colonne, il doit y avoir autant de 0 que de 1. \n");
+    printf("3-Il ne peut pas y avoir deux lignes identiques dans une grille. \n");
+    printf("4-Il ne peut pas y avoir deux colonnes identiques dans une grille. \n");
+    printf("5-Dans une ligne ou une colonne, il ne peut y avoir plus de deux 0 ou deux 1 à la suite. \n");
+}
+
 int ** creer_masque_manuel(int size) {
     int i, j, valeur;
     printf("-- Masque manuel --\n");

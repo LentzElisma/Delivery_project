@@ -25,4 +25,5 @@ int** creer_grille_jeu(int** Matrice_sol, int** masque, int size);
 int verif_ligne (int** Matrice, int size);
 int verif_colonne(int** Matrice, int size);
 void bienvenue();
+void regles_du_jeu();
 #endif //DELIVERY_PROJECT_TABLEAU_H
